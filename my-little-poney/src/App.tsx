@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { PollyApp } from './components/PollyApp';
+
 const App: React.FC = () => {
+  useEffect(() => {
+    console.log('useEffect');
+  }, []);
+
   return (
     <div className='App'>
       <header className='App-header'>
@@ -14,6 +20,9 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+      <main id='pollyApp'>
+        <PollyApp />
+      </main>
     </div>
   );
 };
